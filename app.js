@@ -9,42 +9,40 @@ function getComputerChoice(){
     }
 }
 
-function playRound 
-(playerSelection, 
-    computerSelection) {
-    if (playerSelection.toLowerCase() === 'rock'){
-        if (computerSelection === 'rock'){
-            return 'Tie';
-        } else if(computerSelection === 
-                'paper'){
-                computerScore++;
-                return 'Computer Wins';
+function playRound(playerSelection, computerSelection) {
+ if (playerSelection.toLowerCase() === 'rock'){
+  if (computerSelection === 'rock'){
+        return 'Tie';
+        } else if (computerSelection === 'paper'){
+            computerScore++;
+            return 'Computer Wins';
             } else {
-                playerScore++;
-                return 'Player Wins';
+            playerScore++;
+            return 'Player Wins';
             }
         }
         if (playerSelection === 'paper') {
             if (computerSelection === 'rock') {
-                playerScore++;
-                return 'Player Wins';
+            playerScore++;
+            return 'Player Wins';
             } else if (computerSelection === 'scissors') {
-                computerScore++;
-                return 'Computer Wins';
+            computerScore++;
+            return 'Computer Wins';
             } else {
-                return 'Tie';
+            return 'Tie';
             }
         }
+
         if (playerSelection === 'scissors') {
             if (computerSelection === 'rock') {
-                computerScore++;
-                return 'Computer Wins';
+            computerScore++;
+            return 'Computer Wins';
             } else if (computerSelection === 'paper') {
-                playerScore++;
-                return 'Player Wins';
+            playerScore++;
+            return 'Player Wins';
             } else {
-                    return 'Tie';
-                }
+            return 'Tie';
+            }
             }
         }
 
