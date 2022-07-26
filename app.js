@@ -10,7 +10,7 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection) {
- if (playerSelection.toLowerCase()) {
+ if (playerSelection === 'rock'){
   if (computerSelection === 'rock'){
         return 'Tie';
         } else if (computerSelection === 'paper'){
@@ -44,23 +44,35 @@ function playRound(playerSelection, computerSelection) {
             return 'Tie';
             }
             }
-        }
+
+
+
+    }
+    
 
         
-playerScore = parseInt(0);
-computerScore = parseInt(0);
 
-function game() {
+
+const game = () => {
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt('Make your move rock paper or scissors');
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('Player score = ' + playerScore);
-        console.log('Computer score = ' + computerScore);
+        const playerSelection = prompt('Make your move, rock, paper or scissors').toLowerCase();
+        const computerSelection = getComputerChoice()
+        playRound(playerSelection, computerSelection)
+    
     }
+
+    if (playerScore > computerScore) {
+        return 'Player Wins the Game'
+    } else if (playerScore < computerScore) {
+        return 'Computer Wins The Game'
+    } else {
+        return 'You tied with computer'
+    }
+
 }
 
-game();
+
+console.log(game())
     
 
 
