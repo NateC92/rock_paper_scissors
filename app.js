@@ -10,10 +10,9 @@ function getComputerChoice(){
 }
 
 function playRound 
-(playerelection, 
+(playerSelection, 
     computerSelection) {
-    if (playerSelection.
-         toLowerCase() === 'rock'){
+    if (playerSelection.toLowerCase() === 'rock'){
         if (computerSelection === 'rock'){
             return 'Tie';
         } else if(computerSelection === 
@@ -50,6 +49,20 @@ function playRound
         }
 
         
+playerScore = parseInt(0);
+computerScore = parseInt(0);
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt('Make your move rock paper or scissors');
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log('Player score = ' + playerScore);
+        console.log('Computer score = ' + computerScore);
+    }
+}
+
+game();
     
 
 
