@@ -10,7 +10,7 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection) {
- if (playerSelection.toLowerCase() === 'rock'){
+ if (playerSelection.toLowerCase()) {
   if (computerSelection === 'rock'){
         return 'Tie';
         } else if (computerSelection === 'paper'){
