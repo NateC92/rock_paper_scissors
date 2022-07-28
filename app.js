@@ -53,7 +53,7 @@ computerScore = parseInt(0);
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        let playerSelection= prompt("Make your move rock paper or scissors").toLowerCase();
+        let playerSelection= prompt("Make your move rock paper or scissors".toLowerCase());
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
         console.log("Player score = " + playerScore);
